@@ -1,0 +1,24 @@
+- name: postgresql reloaded
+  service:
+    name=postgresql
+    state=reloaded
+
+- name: postgresql restarted
+  service:
+    name=postgresql
+    state=restarted
+
+- name: zabbix-server reloaded
+  service:
+    name=zabbix-server
+    state=reloaded
+
+- name: nginx reload
+  service:
+    name=nginx
+    state=reloaded
+
+- name: php5-fpm restart
+  service:
+    name=php5-fpm
+    state=restarted
