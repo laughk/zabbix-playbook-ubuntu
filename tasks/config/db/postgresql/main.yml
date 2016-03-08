@@ -15,4 +15,4 @@
     state=reloaded
   when: pg_update_auth_method.changed
 
-- include: init_db/postgresqal.yml
+- include: initdb.yml
