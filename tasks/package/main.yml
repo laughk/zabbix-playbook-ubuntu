@@ -1,14 +1,9 @@
 - name: add zabbix officical repository key
-  apt_key:
-    url=http://repo.zabbix.com/zabbix-official-repo.key
-    state=present
-- name: add zabbix officical repository
-  apt_repository:
-    repo={{ item }}
-    state=present 
-  with_items:
-    - 'deb http://repo.zabbix.com/zabbix/3.0/ubuntu trusty main'
-    - 'deb-src http://repo.zabbix.com/zabbix/3.0/ubuntu trusty main'
+  include: package/repository.yml
+  when:
+    ansible_distribution == 'Ubuntu'
+    and
+    ansible_distribution_version == '14.04'
 
 - name: install zabbix server packages
   when: monitoring_master
