@@ -1,0 +1,11 @@
+- apt_key:
+    url=http://repo.zabbix.com/zabbix-official-repo.key
+    state=present
+
+- name: add zabbix officical repository
+  apt_repository:
+    repo={{ item }}
+    state=present 
+  with_items:
+    - 'deb http://repo.zabbix.com/zabbix/3.0/ubuntu {{ ansible_distribution_release }} main'
+    - 'deb-src http://repo.zabbix.com/zabbix/3.0/ubuntu {{ ansible_distribution_release }} main'
