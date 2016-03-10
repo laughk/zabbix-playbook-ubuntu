@@ -1,4 +1,8 @@
 - include: database/main.yml
+
+- include: ssl.yml
+  when: zbx_server_self_signed_certificate
+
 - include: '{{ item }}'
   with_items:
     - server.yml

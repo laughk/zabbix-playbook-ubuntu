@@ -1,0 +1,5 @@
+zbx_server: false
+zbx_server_self_signed_certificate: false
+zbx_server_ssl_certificate_key_prefix: '/etc/nginx/ssl'
+zbx_server_ssl_certificate_path: '{{ zbx_server_ssl_certificate_key_prefix}}/zabbix_server.crt'
+zbx_server_ssl_certificate_key_path: '{{ zbx_server_ssl_certificate_key_prefix}}/zabbix_server.key'

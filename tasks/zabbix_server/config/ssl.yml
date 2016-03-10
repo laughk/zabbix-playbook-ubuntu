@@ -1,0 +1,13 @@
+- file:
+    path={{ zbx_server_ssl_certificate_key_prefix }}
+    state=directory
+    mode=0700
+    owner=root
+    group=root
+
+- shell: |
+    yes '' | \
+      openssl req -x509 -newkey \
+        rsa:2048 -nodes -sha256 \
+        -keyout {{ zbx_server_ssl_certificate_key_path }} \
+        -out {{ zbx_server_ssl_certificate_path }} -days 3600
