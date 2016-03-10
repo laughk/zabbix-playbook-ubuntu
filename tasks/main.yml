@@ -1,11 +1,10 @@
 #! vi: set filetype=ansible:
 ---
-- include: package/main.yml
+- name: add zabbix officical repository key
+  when: ansible_distribution_version == '14.04'
+  include: repository.yml
 
-- include: zabbix_server.yml
+- include: zabbix_server/main.yml
   when: monitoring_master
 
-- include: ./config/main.yml
-  when: monitoring_master
-
-- include: zabbix_agent.yml
+- include: zabbix_agent/main.yml

@@ -1,0 +1,5 @@
+- include: database/main.yml
+- include: '{{ item }}'
+  with_items:
+    - server.yml
+    - frontend.yml

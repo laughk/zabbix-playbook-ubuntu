@@ -1,8 +1,3 @@
-- name: Japanes font for zabbix metrics
-  alternatives:
-    name=zabbix-frontend-font
-    path=/usr/share/fonts/opentype/ipaexfont-gothic/ipaexg.ttf
-
 - template:
     src=etc/zabbix/zabbix_server.conf.j2
     dest=/etc/zabbix/zabbix_server.conf

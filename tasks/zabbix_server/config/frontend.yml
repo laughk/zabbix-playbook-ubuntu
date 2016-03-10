@@ -1,3 +1,8 @@
+- name: Japanes font for zabbix metrics
+  alternatives:
+    name=zabbix-frontend-font
+    path=/usr/share/fonts/opentype/ipaexfont-gothic/ipaexg.ttf
+
 - template:
     src={{ item }} 
     dest=/{{ item|regex_replace('\.j2$', '') }}
@@ -35,3 +40,4 @@
     state=link
   notify:
     - nginx reload
+
