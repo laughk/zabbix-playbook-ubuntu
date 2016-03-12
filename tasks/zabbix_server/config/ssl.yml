@@ -11,3 +11,4 @@
         rsa:2048 -nodes -sha256 \
         -keyout {{ zbx_server_ssl_certificate_key_path }} \
         -out {{ zbx_server_ssl_certificate_path }} -days 3600
+    creates={{ zbx_server_ssl_certificate_path }}
