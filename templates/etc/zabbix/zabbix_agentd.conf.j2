@@ -151,7 +151,7 @@ ServerActive={{ hostvars['zabbix_master']['ansible_eth1']['ipv4']['address'] }}
 #
 # Mandatory: no
 # Default:
-# Hostname=
+Hostname={{ inventory_hostname }}
 
 ### Option: HostnameItem
 #	Item used for generating Hostname if it is undefined. Ignored if Hostname is defined.
@@ -159,7 +159,7 @@ ServerActive={{ hostvars['zabbix_master']['ansible_eth1']['ipv4']['address'] }}
 #
 # Mandatory: no
 # Default:
-HostnameItem=system.hostname
+# HostnameItem=
 
 ### Option: HostMetadata
 #	Optional parameter that defines host metadata.
