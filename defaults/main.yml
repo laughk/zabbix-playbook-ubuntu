@@ -3,3 +3,6 @@ zbx_server_self_signed_certificate: false
 zbx_server_ssl_certificate_key_prefix: '/etc/nginx/ssl'
 zbx_server_ssl_certificate_path: '{{ zbx_server_ssl_certificate_key_prefix}}/zabbix_server.crt'
 zbx_server_ssl_certificate_key_path: '{{ zbx_server_ssl_certificate_key_prefix}}/zabbix_server.key'
+
+zbx_server_pg_user: zabbix
+zbx_server_pg_password: 6117982f58a0b71e
