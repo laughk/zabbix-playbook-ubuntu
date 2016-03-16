@@ -1,6 +1,8 @@
 server {
 
   listen 80 default_server;
+  {% if zbx_server_ngx_fqdn %}server_name {{ zbx_server_ngx_fqdn }};{% endif %}
+
   root /usr/share/zabbix;
   index index.php;
 
@@ -17,7 +19,9 @@ server {
 }
 
 server {
+
   listen 443 ssl;
+  {% if zbx_server_ngx_fqdn %}server_name {{ zbx_server_ngx_fqdn }};{% endif %}
 
   root /usr/share/zabbix;
   index index.php;
