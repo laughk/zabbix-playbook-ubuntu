@@ -1,6 +1,7 @@
 zbx_server: false
 
 zbx_server_ngx_fqdn: '{{ ansible_fqdn }}'
+zbx_server_ngx_root_path: '/zabbix'
 
 zbx_server_self_signed_certificate: false
 zbx_server_ssl_certificate_key_prefix: '/etc/nginx/ssl'
