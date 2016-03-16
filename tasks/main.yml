@@ -6,5 +6,9 @@
 
 - include: zabbix_server/main.yml
   when: monitoring_master
+  tags:
+    - monitoring_master
 
 - include: zabbix_agent/main.yml
+  tags:
+    - monitoring_agent
