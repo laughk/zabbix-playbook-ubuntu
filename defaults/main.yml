@@ -9,5 +9,8 @@ zbx_server_ssl_certificate_key_prefix: '/etc/nginx/ssl'
 zbx_server_ssl_certificate_path: '{{ zbx_server_ssl_certificate_key_prefix}}/zabbix_server.crt'
 zbx_server_ssl_certificate_key_path: '{{ zbx_server_ssl_certificate_key_prefix}}/zabbix_server.key'
 
+# monitoring master server host in inventry.
+zbx_monitoring_serverhost: ''
+
 zbx_server_pg_user: zabbix
 zbx_server_pg_password: 6117982f58a0b71e
