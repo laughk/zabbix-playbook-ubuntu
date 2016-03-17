@@ -5,9 +5,9 @@
   include: repository.yml
 
 - include: zabbix_server/main.yml
-  when: monitoring_master
+  when: zbx_server
   tags:
-    - monitoring_master
+    - zbx_server
 
 - include: zabbix_agent/main.yml
   tags:

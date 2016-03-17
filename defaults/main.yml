@@ -10,7 +10,8 @@ zbx_server_ssl_certificate_path: '{{ zbx_server_ssl_certificate_key_prefix}}/zab
 zbx_server_ssl_certificate_key_path: '{{ zbx_server_ssl_certificate_key_prefix}}/zabbix_server.key'
 
 # monitoring master server host in inventry.
-zbx_monitoring_server_host: '{{ hostvars[monitoring_server]["ansible_%s"|format(zbx_monitoring_eth_number)]["ipv4"]["address"] }}'
+zbx_monitoring_server: ''
+zbx_monitoring_server_host: '{{ hostvars[zbx_monitoring_server]["ansible_%s"|format(zbx_monitoring_eth_number)]["ipv4"]["address"] }}'
 zbx_monitoring_eth_number: 'eth0'
 
 zbx_server_db_user: zabbix

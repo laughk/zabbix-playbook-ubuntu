@@ -1,5 +1,5 @@
 - name: install zabbix server packages
-  when: monitoring_master
+  when: zbx_server
   apt:
     name={{ item }}
     state=present
