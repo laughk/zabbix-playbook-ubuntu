@@ -8,10 +8,10 @@
     name=postgresql
     state=restarted
 
-- name: zabbix-server reloaded
+- name: zabbix-server restart
   service:
     name=zabbix-server
-    state=reloaded
+    state=restart
 
 - name: zabbix-agent restart
   service:
