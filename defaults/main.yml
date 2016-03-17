@@ -13,5 +13,5 @@ zbx_server_ssl_certificate_key_path: '{{ zbx_server_ssl_certificate_key_prefix}}
 zbx_monitoring_serverhost: ''
 zbx_monitoring_eth_number: 'eth0'
 
-zbx_server_pg_user: zabbix
-zbx_server_pg_password: 6117982f58a0b71e
+zbx_server_db_user: zabbix
+zbx_server_db_password: 6117982f58a0b71e
