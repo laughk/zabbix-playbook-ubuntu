@@ -1,1 +1,1 @@
-# zabbix-playbook-ubuntu1404
+# zabbix-playbook-ubuntu
