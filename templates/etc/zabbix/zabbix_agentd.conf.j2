@@ -95,7 +95,7 @@ LogFileSize=0
 {% if 'monitoring' in group_names %}
 Server=127.0.0.1
 {% else %}
-Server={{ hostvars[monitoring_server]['ansible_%s'|format(zbx_monitoring_eth_number)]['ipv4']['address'] }}
+Server={{ zbx_monitoring_server_host }}
 {% endif %}
 
 ### Option: ListenPort
@@ -140,7 +140,7 @@ Server={{ hostvars[monitoring_server]['ansible_%s'|format(zbx_monitoring_eth_num
 {% if 'monitoring' in group_names %}
 ServerActive=127.0.0.1
 {% else %}
-ServerActive={{ hostvars[monitoring_server]['ansible_%s'|format(zbx_monitoring_eth_number)]['ipv4']['address'] }}
+ServerActive={{ zbx_monitoring_server_host }}
 {% endif %}
 
 
