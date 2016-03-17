@@ -1,6 +1,6 @@
 - postgresql_user:
-    name={{ zbx_server_pg_user }}
-    password={{ zbx_server_pg_password }}
+    name={{ zbx_server_db_user }}
+    password={{ zbx_server_db_password }}
   become: yes
   become_user: postgres
 
