@@ -9,6 +9,11 @@ zbx_server_ssl_certificate_key_prefix: '/etc/nginx/ssl'
 zbx_server_ssl_certificate_path: '{{ zbx_server_ssl_certificate_key_prefix}}/zabbix_server.crt'
 zbx_server_ssl_certificate_key_path: '{{ zbx_server_ssl_certificate_key_prefix}}/zabbix_server.key'
 
+# for zabbix_server.conf
+# ---------------------------------
+zbx_server_alert_scripts_path: /usr/lib/zabbix/alertscripts
+zbx_server_external_scripts: /usr/lib/zabbix/externalscripts
+
 # monitoring master server host in inventry.
 zbx_monitoring_server: ''
 zbx_monitoring_server_host: '{{ hostvars[zbx_monitoring_server]["ansible_%s"|format(zbx_monitoring_eth_number)]["ipv4"]["address"] }}'
@@ -16,3 +21,4 @@ zbx_monitoring_eth_number: 'eth0'
 
 zbx_server_db_user: zabbix
 zbx_server_db_password: 6117982f58a0b71e
+

@@ -453,7 +453,7 @@ Timeout=4
 # Default:
 # AlertScriptsPath=${datadir}/zabbix/alertscripts
 
-AlertScriptsPath=/usr/lib/zabbix/alertscripts
+AlertScriptsPath={{ zbx_server_alert_scripts_path }}
 
 ### Option: ExternalScripts
 #	Full path to location of external scripts.
@@ -463,7 +463,7 @@ AlertScriptsPath=/usr/lib/zabbix/alertscripts
 # Default:
 # ExternalScripts=${datadir}/zabbix/externalscripts
 
-ExternalScripts=/usr/lib/zabbix/externalscripts
+ExternalScripts={{ zbx_server_external_scripts }}
 
 ### Option: FpingLocation
 #	Location of fping.
