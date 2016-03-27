@@ -1,5 +1,8 @@
-- name: install zabbix agent
+- name: install zabbix packages for monitored hosts.
   apt:
-    name=zabbix-agent
+    name={{ item }}
     state=latest
+  with_items:
+    - zabbix-agent
+    - zabbix-sender
 
