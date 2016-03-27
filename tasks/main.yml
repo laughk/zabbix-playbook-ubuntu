@@ -9,8 +9,8 @@
 - include: zabbix_server/main.yml
   when: zbx_server
   tags:
-    - zbx_server
+    - zbx-server
 
 - include: zabbix_agent/main.yml
   tags:
-    - monitoring_agent
+    - zbx-monitored
